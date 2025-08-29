@@ -1,4 +1,5 @@
 :root {
+  font-family: sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
   line-height: 1.5;
   --main-color: #4d0303;
   --secondary-color: #fff;
@@ -11,17 +12,25 @@
 }
 
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-  width: 80%;
   margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 80%;
+  margin: auto;
 }
 
 header {
   text-align: center;
   font-size: 1.5rem;
+  margin-top: 24px;
 }
 
 #scale {
@@ -90,6 +99,11 @@ button {
   border: 3px solid var(--main-color);
 }
 
+#add-course:hover {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
 form {
   text-align: center;
 }
@@ -102,6 +116,12 @@ form {
   font-size: 1.2rem;
 }
 
+#calculate-cgpa:hover {
+  background-color: var(--secondary-color);
+  border: 3px solid var(--main-color);
+  color: var(--main-color);
+}
+
 #cgpa-result {
   text-align: center;
   margin-top: 50px;
@@ -111,17 +131,27 @@ form {
 
 .cgpa-value {
   display: block;
-  margin-top: 20px;
+  margin: 20px 0;
   font-size: 4rem;
   color: var(--main-color);
 }
 
+footer {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  padding: 10px;
+}
+
 @media (max-width: 575px) {
-  body {
+  main {
     width: 90%;
+    flex: 1;
   }
 
-  header {
+  header,
+  footer {
     font-size: 1rem;
   }
 
@@ -163,10 +193,19 @@ form {
   #calculate-cgpa {
     margin-top: 50px;
   }
+
+  footer {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
-  body {
+  header {
+    width: 80%;
+    margin: auto;
+  }
+  main {
     width: 90%;
   }
 }
