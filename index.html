@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculator</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=css-tricks.com"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CGPA Calculator for Nigerian Students</h1>
+    </header>
+    <main>
+      <div id="scale">
+        <label for="grading-scale">Select a Grading Scale:</label>
+        <select id="grading-scale" name="grading-scale">
+          <option value="4-scale">4.0 Scale</option>
+          <option value="5-scale">5.0 Scale</option>
+        </select>
+      </div>
+
+      <div id="text">
+        <p>Enter your grades and credit unit for each course.</p>
+        <p>
+          After you fill in a row, click the <b>"Add Another Course"</b> button
+          to add more rows to fill your grades and units.
+        </p>
+        <p>
+          Enter all your grades and their equivalent credit units to get
+          accurate result.
+        </p>
+      </div>
+
+      <form action="">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Course Title (optional)</th>
+              <th>Grade *</th>
+              <th>Credit Units *</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="form-container">
+            <tr>
+              <td class="row-number">1</td>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <select name="grade" required>
+                  <option value="">Select Grade</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                </select>
+              </td>
+              <td>
+                <input type="number" name="units" min="1" required />
+              </td>
+              <td>
+                <button type="button">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="add-course" type="button">Add Another Course</button>
+        <button id="calculate-cgpa" type="submit">Calculate CGPA</button>
+      </form>
+
+      <!-- To display the CGPA calculation -->
+      <div id="cgpa-result"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
