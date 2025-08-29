@@ -27,8 +27,8 @@ Users can input their grades and the corresponding credit units, then click on t
 
 ### Links
 
-- **Live Demo:** [View Project](#)
-- **GitHub Repo:** [Repository](#)
+- **Live Demo:** [View Project](https://abialafaith.github.io/cgpa-calculator/)
+- **GitHub Repo:** [Repository](https://github.com/AbialaFaith/cgpa-calculator)
 
 ## My Process
 
@@ -47,4 +47,4 @@ To build this CGPA Calculator project, I:
 
 ## Author
 
-- LinkedIn - [Faith Abiala] (https://www.linkedin.com/in/faith-abiala/)
+- LinkedIn - [Faith Abiala](https://www.linkedin.com/in/faith-abiala/)
